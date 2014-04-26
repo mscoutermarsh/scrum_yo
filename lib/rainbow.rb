@@ -22,7 +22,7 @@ class Rainbow
   end
 
   def colorize(string)
-    rainbow_string = ""
+    rainbow_string = ''
     string.each_char do |char|
       rainbow_string << "\e[38;5;#{rainbow}m#{char}\e[0m"
     end
