@@ -1,24 +1,26 @@
-# ScrumYo
+![scrum yo](https://raw.githubusercontent.com/mscoutermarsh/scrum_yo/master/scrum_art.png)
 
-TODO: Write a gem description
-
+Be awesome at your daily stand up. Get a summary of your most recent GitHub commits & pull requests right in your console. 
 ## Installation
 
-Add this line to your application's Gemfile:
-
-    gem 'scrum_yo'
-
-And then execute:
-
-    $ bundle
-
-Or install it yourself as:
-
     $ gem install scrum_yo
+    
+If using RVM, install it to your global gemset:
+
+    $ rvm @global do gem install scrum_yo
+    
+ScrumYo uses the GitHub API to grab your recent commits/pull requests.
+
 
 ## Usage
 
-TODO: Write usage instructions here
+There is only 1 command! To see your recent activity:
+
+    $ scrumyo
+    
+## Authentication
+
+You'll be asked to login to GitHub your first time using ScrumYo. Credentials are then saved to your ```~/.netrc``` file. You should use a [personal access token](https://github.com/settings/tokens/new) instead of your password!
 
 ## Contributing
 
