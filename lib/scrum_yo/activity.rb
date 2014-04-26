@@ -26,7 +26,7 @@ module ScrumYo
     end
 
     def filter_activity(events)
-      events = events.select { |e| %w{PushEvent PullRequestEvent}.include? e.type }
+      events.select! { |e| %w{PushEvent PullRequestEvent}.include? e.type }
 
       events.each do |event|
         if event.payload.commits
