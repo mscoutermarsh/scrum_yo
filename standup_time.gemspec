@@ -14,15 +14,17 @@ Gem::Specification.new do |spec|
   spec.license       = "MIT"
 
   spec.files         = `git ls-files -z`.split("\x0")
-  spec.executables   = spec.files.grep(%r{^bin/}) { |f| File.basename(f) }
+  spec.executables   = ['standup_time'] 
   spec.test_files    = spec.files.grep(%r{^(test|spec|features)/})
   spec.require_paths = ["lib"]
 
-  spec.add_dependency 'thor', '~> 0.19.1'
   spec.add_dependency 'octokit', '~> 2.0'
   spec.add_dependency 'netrc', '~> 0.7.7'
+  spec.add_dependency 'activesupport', '~> 4.1.0'
 
   spec.add_development_dependency "bundler", "~> 1.5"
+  spec.add_development_dependency "pry"
+  spec.add_development_dependency "pry-debugger"
   spec.add_development_dependency "rspec"
   spec.add_development_dependency "rake"
 end

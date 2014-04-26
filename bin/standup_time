@@ -1,0 +1,5 @@
+#!/usr/bin/env ruby
+
+require 'standup_time'
+
+StandupTime::CLI.start(*ARGV)
