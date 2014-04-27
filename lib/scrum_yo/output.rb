@@ -52,7 +52,7 @@ module ScrumYo
     end
 
     def format_time(time)
-      time = time.in_time_zone(@activity.user.time_zone)
+      time = time + Time.now.utc_offset
       time.strftime('%l:%M %p')
     end
   end

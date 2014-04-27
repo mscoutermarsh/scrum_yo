@@ -12,11 +12,6 @@ module ScrumYo
       @emails = @github_client.emails
     end
 
-    def time_zone
-      Time.zone = DateTime.now.utc_offset / 60 / 60
-      Time.zone.name
-    end
-
     def self.authenticate(logged_in = false)
       netrc = Netrc.read
 
