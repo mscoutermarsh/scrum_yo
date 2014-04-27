@@ -1,8 +1,8 @@
 ![scrum yo](https://raw.githubusercontent.com/mscoutermarsh/scrum_yo/master/scrum_art.png)
-
+----
 Be awesome at your daily stand up. ScrumYo is a command line tool that grabs a summary of your most recent GitHub commits & pull requests right in your console.
 
-### Screenshot
+## Sceenshot
 ![example of scrumyo](https://raw.githubusercontent.com/mscoutermarsh/scrum_yo/master/scrumyo_example.png)
 
 ## Installation
@@ -24,7 +24,8 @@ You'll have to login to your GitHub account on first use.
     
 ## Authentication
 
-You'll be asked to login to GitHub your first time using ScrumYo. This creates an OAuth token to be used for subsequent logins. The OAuth token is saved to your ```~/.netrc``` file. 
+You'll be asked to login to GitHub your first use (even works with two-factor auth!). 
+An OAuth token to be used for subsequent logins. The token is saved to your ```~/.netrc``` file. 
 
 ## Contributing :heart: :purple_heart: :green_heart:
 
