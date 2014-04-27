@@ -26,12 +26,15 @@ You'll have to login to your GitHub account on first use.
     
 ## Authentication
 
-You'll be asked to login to GitHub your first time using ScrumYo. This creates an OAuth token to be used for subsequent logins. Oauth token is saved to your ```~/.netrc``` file. 
+You'll be asked to login to GitHub your first time using ScrumYo. This creates an OAuth token to be used for subsequent logins. The OAuth token is saved to your ```~/.netrc``` file. 
 
-## Contributing
+## Contributing :heart: :purple_heart: :green_heart:
 
 1. Fork it ( http://github.com/mscoutermarsh/scrum_yo/fork )
 2. Create your feature branch (`git checkout -b my-new-feature`)
 3. Commit your changes (`git commit -am 'Add some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)
 5. Create new Pull Request
+
+## Help!
+Tweet me: [@mscccc](https://twitter.com/mscccc) or open an issue.
