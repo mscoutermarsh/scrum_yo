@@ -26,7 +26,7 @@ You'll have to login to your GitHub account on first use.
 ## Authentication
 
 You'll be asked to login to GitHub your first use (even works with two-factor auth!). 
-An OAuth token to be used for subsequent logins. The token is saved to your ```~/.netrc``` file. 
+An OAuth token is used for subsequent logins. The token is saved to your ```~/.netrc``` file. 
 
 ## Contributing :heart: :purple_heart: :green_heart:
 
