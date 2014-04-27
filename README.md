@@ -1,5 +1,6 @@
 ![scrum yo](https://raw.githubusercontent.com/mscoutermarsh/scrum_yo/master/scrum_art.png)
 ----
+[![Gem Version](https://badge.fury.io/rb/scrum_yo.png)](http://badge.fury.io/rb/scrum_yo)  
 Be awesome at your daily stand up. ScrumYo is a command line tool that grabs a summary of your most recent GitHub commits & pull requests right in your console.
 
 ## Sceenshot
