@@ -11,6 +11,9 @@ require 'string_hacks'
 module ScrumYo
   class CLI
     def self.start(*args)
+      puts "ScrumYo!".rainbow
+      ScrumYo::User.authenticate
+
       puts "Happy #{DateTime.current.strftime('%A')}!\n"
       puts "Grabbing your recent GitHub Activity...\n".rainbow
       ScrumYo::Output.new.print
