@@ -1,8 +1,6 @@
 ![scrum yo](https://raw.githubusercontent.com/mscoutermarsh/scrum_yo/master/scrum_art.png)
 
-Be awesome at your daily stand up. Get a summary of your most recent GitHub commits & pull requests right in your console.
-
-ScrumYo uses the GitHub API to grab your recent commits/pull requests.
+Be awesome at your daily stand up. ScrumYo is a command line tool that grabs a summary of your most recent GitHub commits & pull requests right in your console.
 
 ### Screenshot
 ![example of scrumyo](https://raw.githubusercontent.com/mscoutermarsh/scrum_yo/master/scrumyo_example.png)
