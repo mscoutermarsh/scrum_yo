@@ -8,15 +8,16 @@ Gem::Specification.new do |spec|
   spec.version       = ScrumYo::VERSION
   spec.authors       = ["Mike Coutermarsh"]
   spec.email         = ["coutermarsh.mike@gmail.com"]
-  spec.summary       = %q{Be awesome at your daily stand up with a summary of all your recent GitHub Activity.}
-  spec.description   = %q{ScrumYo! G}
-  spec.homepage      = ""
+  spec.summary       = %q{Be awesome at your daily stand up with a summary of all your recent GitHub activity.}
+  spec.description   = %q{ScrumYo! Be awesome at your daily stand up with a summary of all your recent GitHub activity right in your console!}
+  spec.homepage      = "https://github.com/mscoutermarsh/scrum_yo"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files -z`.split("\x0")
   spec.executables   = ['scrumyo'] 
   spec.test_files    = spec.files.grep(%r{^(test|spec|features)/})
   spec.require_paths = ["lib"]
+  spec.post_install_message = "Get started by running $ scrumyo"
 
   spec.add_dependency 'octokit', '~> 2.0'
   spec.add_dependency 'netrc', '~> 0.7.7'
