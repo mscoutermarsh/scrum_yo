@@ -12,19 +12,14 @@ module ScrumYo
       @emails = @github_client.emails
     end
 
-    def self.authenticate(logged_in = false)
-      netrc = Netrc.read
-
-      if netrc['api.github.com'] && Octokit::Client.new(netrc: true).login
-        return true
-      end
+    def authenticate(logged_in = false)
+      return true if logged_in?
 
       puts "Authentication failed".red if logged_in
-
       get_credentials
     end
 
-    def self.get_credentials
+    def get_credentials
       puts "Please login with your Github account.".yellow
       username = ask("Github Username:")
       password = ask('Password (typing hidden):') { |q| q.echo = false }
@@ -34,21 +29,31 @@ module ScrumYo
 
       if agree('Do you use Two Factor Auth? (y/n)')
         two_factor = ask('Enter your 2FA token:')
-        oauth = client.create_authorization(scopes: ['user','repo'], note: 'ScrumYo gem!', headers: { "X-GitHub-OTP" => two_factor })
+        oauth = oauth_authorization(client, headers: {"X-GitHub-OTP" => two_factor})
       else
-        oauth = client.create_authorization(scopes: ['user','repo'], note: 'ScrumYo gem!')
+        oauth = oauth_authorization(client)
       end
 
       save_to_netrc(username, oauth.token)
-      self.authenticate(true)
+      authenticate(true)
     end
 
-    def self.save_to_netrc(user, token)
+private
+    def oauth_authorization(client, headers = {})
+      client.create_authorization(scopes: ['user','repo'], note: 'ScrumYo gem!', headers: headers)
+    end
+
+    def save_to_netrc(user, token)
+      binding.pry
       netrc = Netrc.read
       netrc.new_item_prefix = "# This entry was added by the ScrumYo gem\n"
       netrc['api.github.com'] = user, token
       netrc.save
     end
 
+    def logged_in?
+      netrc = Netrc.read
+      netrc['api.github.com'] && Octokit::Client.new(netrc: true).login
+    end
   end
 end

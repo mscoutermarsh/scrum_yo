@@ -22,8 +22,7 @@ module ScrumYo
     end
 
     def older_than_one_day(event)
-      # 3600 = seconds in an hour
-      (DateTime.now.in_time_zone('UTC') - event.created_at) / 3600 > 24
+      (Time.now.utc - event.created_at) / 3600 > 24
     end
 
     def filter_activity(events)
