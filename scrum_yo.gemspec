@@ -21,7 +21,6 @@ Gem::Specification.new do |spec|
 
   spec.add_dependency 'octokit', '~> 2.0'
   spec.add_dependency 'netrc', '~> 0.7.7'
-  spec.add_dependency 'activesupport', '~> 4.1.0'
   spec.add_dependency 'colorize'
   spec.add_dependency 'highline'
 
