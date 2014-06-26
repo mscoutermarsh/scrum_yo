@@ -12,7 +12,7 @@ module ScrumYo
   class CLI
     def self.start(*args)
       puts "ScrumYo!".rainbow
-      ScrumYo::User.authenticate
+      ScrumYo::User.new.authenticate
 
       puts "Happy #{DateTime.current.strftime('%A')}!\n"
       puts "Grabbing your recent GitHub Activity...\n".rainbow
