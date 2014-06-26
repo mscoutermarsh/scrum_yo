@@ -17,8 +17,7 @@ module ScrumYo
       end
     end
 
-    private
-
+private
     def print_day(event)
       day = "#{event.created_at.strftime('%a, %b %e')}"
 
@@ -33,7 +32,7 @@ module ScrumYo
       event_time = format_time(event.created_at)
 
       puts "#{event_time}: Pushed to: #{event.repo.name}".indent(2).red
-      puts "Commit #{'message'.pluralize(commits.size)}:".indent(4).yellow
+      puts "Commit message:".indent(4).yellow
 
       print_commits(commits)
     end
