@@ -13,7 +13,7 @@ RSpec.configure do |config|
   config.order = 'random'
 
   config.before(:each) do
-    Netrc.stub!(:read).and_return('api.github.com' => ['mscoutermarsh', 'test'])
+    Netrc.stub(:read).and_return('api.github.com' => ['mscoutermarsh', 'test'])
   end
 end
 
