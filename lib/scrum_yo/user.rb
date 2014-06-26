@@ -44,7 +44,6 @@ private
     end
 
     def save_to_netrc(user, token)
-      binding.pry
       netrc = Netrc.read
       netrc.new_item_prefix = "# This entry was added by the ScrumYo gem\n"
       netrc['api.github.com'] = user, token
