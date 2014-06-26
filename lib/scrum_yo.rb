@@ -9,10 +9,9 @@ module ScrumYo
   class CLI
     def self.start(*args)
       puts "ScrumYo!".rainbow
-      ScrumYo::User.new.authenticate
-
       puts "Happy #{Time.now.strftime('%A')}!\n"
       puts "Grabbing your recent GitHub Activity...\n".rainbow
+
       ScrumYo::Output.new.print
     end
   end
